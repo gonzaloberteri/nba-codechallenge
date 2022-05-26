@@ -1,14 +1,23 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {
+  GestureResponderEvent,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 import {SvgCssUri} from 'react-native-svg';
 import {Team} from '../types/team';
+import {TeamListScreenProps} from '../types/navigation';
 
-const TeamIteam = (team: Team) => {
+const TeamItem = (team: Team) => {
+  const navigation = useNavigation<TeamListScreenProps>();
+
   return (
-    <View
+    <TouchableOpacity
+      onPress={() => navigation.navigate('PlayerList', {teamId: team.Key})}
       style={[styles.container, {backgroundColor: `#${team.PrimaryColor}`}]}>
       <SvgCssUri uri={team.WikipediaLogoUrl} width="100%" fill={'black'} />
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -29,4 +38,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TeamIteam;
+export default TeamItem;

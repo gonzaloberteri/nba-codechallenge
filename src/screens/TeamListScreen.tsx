@@ -1,9 +1,13 @@
 import React from 'react';
-import {FlatList} from 'react-native';
-import TeamIteam from '../components/Team';
+import {FlatList, GestureResponderEvent} from 'react-native';
+import TeamIteam from '../components/TeamItem';
 import useGetTeams from '../hooks/useGetTeams';
+import {RootStackScreenProps} from '../types/navigation';
 
-const TeamListScreen = () => {
+const TeamListScreen = ({
+  navigation,
+  route,
+}: RootStackScreenProps<'TeamList'>) => {
   const {data} = useGetTeams();
 
   return (

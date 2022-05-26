@@ -1,16 +1,17 @@
 import React from 'react';
 import {FlatList} from 'react-native';
-import TeamIteam from '../components/Team';
-import useGetTeams from '../hooks/useGetTeams';
+import PlayerItem from '../components/PlayerItem';
+import useGetPlayers from '../hooks/useGetPlayer';
+import {RootStackScreenProps} from '../types/navigation';
 
-const PlayerListScreen = () => {
-  const {data} = useGetTeams();
+const PlayerListScreen = ({route}: RootStackScreenProps<'PlayerList'>) => {
+  const {data: playerList} = useGetPlayers(route.params.teamId.toString());
 
   return (
     <FlatList
-      data={data}
-      renderItem={team => <TeamIteam {...team.item} />}
-      keyExtractor={team => `team-${team.TeamID}`}
+      data={playerList}
+      renderItem={player => <PlayerItem {...player.item} />}
+      keyExtractor={player => `player-${player.PlayerID}`}
     />
   );
 };

@@ -28,8 +28,8 @@
 - [x] Read Sportsdata.io NBA [API docs](https://sportsdata.io/developers/api-documentation/nba).
 - [x] Create Sportsdata.io NBA [API key](https://sportsdata.io/cart/free-trial).
 - [x] Create a new Screen with a `<FlatList/>` component listing the active teams from the current season.
-    - [ ] Tapping on a team should open the team detail screen.
-- [ ] Create a new Screen with a `<FlatList/>` component listing players from certain team.
+    - [x] Tapping on a team should open the team detail screen.
+- [x] Create a new Screen with a `<FlatList/>` component listing players from certain team.
     - [ ] Tapping on a player should open the player detail screen.
 - [ ] Create a new Screen with a detail view of a player.
 - [ ] Manage the state using [Zustand](https://github.com/pmndrs/zustand)
