@@ -11,7 +11,7 @@ export type RootStackScreenProps<T extends keyof RootStackParamList> =
 type TeamListScreenParams = undefined;
 
 export type TeamListScreenProps = StackNavigationProp<TeamListScreenParams>;
-  
+
 declare global {
   namespace ReactNavigation {
     interface RootParamList extends RootStackParamList {}

@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderLeftColor: 'black',
-    borderLeftWidth: StyleSheet.hairlineWidth
+    borderLeftWidth: StyleSheet.hairlineWidth,
   },
 });
 

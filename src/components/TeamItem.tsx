@@ -1,10 +1,6 @@
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import {
-  GestureResponderEvent,
-  StyleSheet,
-  TouchableOpacity,
-} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import {SvgCssUri} from 'react-native-svg';
 import {Team} from '../types/team';
 import {TeamListScreenProps} from '../types/navigation';

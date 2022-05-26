@@ -2,7 +2,6 @@ import {useEffect, useState} from 'react';
 import axios from 'axios';
 import {API_URL, API_TOKEN} from '@env';
 import {Team} from '../types/team';
-import {Player} from '../types/player';
 
 function useGetTeams() {
   const [data, setData] = useState<Team[]>();
