@@ -25,9 +25,9 @@
 - `npm run lint:fix`
 
 ## Objetives
-- [ ] Read Sportsdata.io NBA [API docs](https://sportsdata.io/developers/api-documentation/nba).
-- [ ] Create Sportsdata.io NBA [API key](https://sportsdata.io/cart/free-trial).
-- [ ] Create a new Screen with a `<FlatList/>` component listing the active teams from the current season.
+- [x] Read Sportsdata.io NBA [API docs](https://sportsdata.io/developers/api-documentation/nba).
+- [x] Create Sportsdata.io NBA [API key](https://sportsdata.io/cart/free-trial).
+- [x] Create a new Screen with a `<FlatList/>` component listing the active teams from the current season.
     - [ ] Tapping on a team should open the team detail screen.
 - [ ] Create a new Screen with a `<FlatList/>` component listing players from certain team.
     - [ ] Tapping on a player should open the player detail screen.

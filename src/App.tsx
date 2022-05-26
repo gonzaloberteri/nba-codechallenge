@@ -1,14 +1,15 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {HomeScreen} from './screens';
+import {PlayerListScreen, TeamListScreen} from './screens';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => (
   <NavigationContainer>
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Team List" component={TeamListScreen} />
+      <Stack.Screen name="Player List" component={PlayerListScreen} />
     </Stack.Navigator>
   </NavigationContainer>
 );

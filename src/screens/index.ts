@@ -1,3 +1,4 @@
-import HomeScreen from "./HomeScreen"
+import TeamListScreen from './TeamListScreen';
+import PlayerListScreen from './PlayerListScreen';
 
-export {HomeScreen}
+export {TeamListScreen, PlayerListScreen};
