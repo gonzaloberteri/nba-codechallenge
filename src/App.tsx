@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {PlayerListScreen, TeamListScreen} from './screens';
 import {RootStackParamList} from './types/navigation';
+import PlayerDetailScreen from './screens/PlayerDetailScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -18,6 +19,11 @@ const App = () => (
         name="PlayerList"
         component={PlayerListScreen}
         options={{title: 'Players'}}
+      />
+      <Stack.Screen
+        name="PlayerDetail"
+        component={PlayerDetailScreen}
+        options={{title: 'Profile'}}
       />
     </Stack.Navigator>
   </NavigationContainer>

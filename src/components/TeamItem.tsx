@@ -3,14 +3,14 @@ import {useNavigation} from '@react-navigation/native';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 import {SvgCssUri} from 'react-native-svg';
 import {Team} from '../types/team';
-import {TeamListScreenProps} from '../types/navigation';
+import {ScreenProps} from '../types/navigation';
 
 const TeamItem = (team: Team) => {
-  const navigation = useNavigation<TeamListScreenProps>();
+  const navigation = useNavigation<ScreenProps>();
 
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate('PlayerList', {teamId: team.Key})}
+      onPress={() => navigation.navigate('PlayerList', {team})}
       style={[styles.container, {backgroundColor: `#${team.PrimaryColor}`}]}>
       <SvgCssUri uri={team.WikipediaLogoUrl} width="100%" fill={'black'} />
     </TouchableOpacity>

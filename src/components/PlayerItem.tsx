@@ -1,10 +1,21 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Player} from '../types/player';
+import {Team} from '../types/team';
 
-const PlayerItem = (player: Player) => {
+interface PlayerItemProps {
+  player: Player;
+  team: Team;
+}
+
+const PlayerItem = ({player, team}: PlayerItemProps) => {
+  const navigation = useNavigation();
+
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigation.navigate('PlayerDetail', {player, team})}>
       <Image source={{uri: player.PhotoUrl}} style={styles.headshot} />
       <View style={styles.description}>
         <Text>
@@ -14,7 +25,7 @@ const PlayerItem = (player: Player) => {
           {player.BirthState}, {player.BirthCountry}
         </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

@@ -1,14 +1,20 @@
-import type {StackNavigationProp, StackScreenProps} from '@react-navigation/stack';
+import type {
+  StackNavigationProp,
+  StackScreenProps,
+} from '@react-navigation/stack';
+import {Player} from './player';
+import {Team} from './team';
 
 export type RootStackParamList = {
   TeamList: undefined;
-  PlayerList: {teamId: string};
+  PlayerList: {team: Team};
+  PlayerDetail: {player: Player; team: Team};
 };
 
 export type RootStackScreenProps<T extends keyof RootStackParamList> =
   StackScreenProps<RootStackParamList, T>;
 
-export type TeamListScreenProps = StackNavigationProp<RootStackParamList>;
+export type ScreenProps = StackNavigationProp<RootStackParamList>;
 
 declare global {
   namespace ReactNavigation {
